@@ -1,0 +1,20 @@
+<br>
+  <div class="card" style="width: 25rem;">
+  <img src={{person.imageurl}} class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Name: {{person.name}}</h5>
+    <p class="card-text">
+      {{#if person.dob}}
+        Date of Birth {{person.dob}} <br>
+      {{/if}}
+      {{person.About}}
+    </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    {{#each person.hobbies}}
+        <li class="list-group-item">{{this}}</li>
+    {{/each}}
+
+  </ul>
+
+  </div>

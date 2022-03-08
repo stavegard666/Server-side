@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(0, 7, 19);
+
+}
+
+.image{
+    
+    width: 10rem;
+}
+
+
+.legals{
+
+  position: fixed;
+  color: #f1f1f1;
+  bottom: 5;
+  left: 10;
+}
+
+.links {
+  position: fixed;
+  color: #f1f1f1;
+  bottom: 0;
+  right: 10;
+}
+
+.shop{
+  right: 10;
+}
