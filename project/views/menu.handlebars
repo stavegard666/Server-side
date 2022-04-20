@@ -1,7 +1,7 @@
 <br>
 <div class="container-fluid">
   <div class="row align-items-center">
-      {{#each PizzaList}}
+    {{#each PizzaList}}
     <div class="col-10 col-sm-3 md-4 ">
     <div class="card mb-3" style="max-width: 540px; min-height: 250px; background-color: #e0dc0fb4;" >
     <div class="row g-0">
@@ -11,11 +11,15 @@
         </div>
         <div class="col-md-8">
         <div class="card-body">
+          
             <h5 class="card-title">{{this.name}}</h5>
             <p class="card-text">Ingredient : {{this.Ingredients}}</p>
             <p class="card-text"><small class="text">Prix :{{this.Prix}} €</small></p>
-            <button type="button" class="btn btn-outline-dark" onClick="addShop('{{this.name}}')">Buy</button>
-            
+          <form method="post">
+            <input type="hidden" id="id" name="_id" value="{{this._id}}" />
+            <input type="hidden" id="number" name="number" value="99" /> 
+            <button type="submit" class="btn btn-outline-dark">Buy</button>
+         </form>
         </div>
         </div>
     </div>
@@ -26,9 +30,5 @@
 
 
 <script>
-function addShop(str){
-  alert("Not implemented yet!");
-
-}
 
 </script>
