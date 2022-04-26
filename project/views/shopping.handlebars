@@ -9,10 +9,26 @@
       {{this.Prix}}€
     </div>
     <span class="badge bg-primary rounded-pill">{{this.number}}</span>
-
 </form>
   </li>
   {{/if}}
 {{/each}}
+<br>
+<button type="button" class="btn btn-dark" onClick="Pay()">Pay</button>
+total : {{total}}
 </ol>
 
+
+<script>
+
+  var total = localStorage.getItem('total');
+    total = +total + +ShoppingList.Prix;
+    localStorage.setItem('total', total);
+    let n = total.toFixed(2);
+    document.getElementById("total").innerHTML = "€" + n;
+
+
+  function Pay(str) {
+    alert("Not implemented yet");
+    }
+</script>
